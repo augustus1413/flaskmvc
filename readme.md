@@ -1,5 +1,146 @@
 ![Tests](https://github.com/uwidcit/flaskmvc/actions/workflows/dev.yml/badge.svg)
 
+# Student Incentive System
+
+A command-line application to manage student volunteering hours, accolades, and leaderboards.
+
+---
+
+## Features
+- Staff can log and confirm student volunteering hours.
+- Students can view their total hours, accolades, and leaderboard rankings.
+- Milestones trigger accolades (e.g., 10, 25, 50 hours).
+- Leaderboard ranks students based on total confirmed hours.
+
+---
+
+## CLI Commands
+
+### `init`
+**Description:**  
+Creates and initializes the database with sample users, students, staff, volunteer records, accolades, and leaderboard entries.
+
+**Usage:**  
+```bash
+flask init
+
+### `request-confirmation`
+**Description:**  
+Student requests confirmation for a specified number of volunteer hours.
+
+**Usage:**  
+```bash
+flask request-confirmation
+
+### `view-leaderboard`
+**Description:**  
+Displays the leaderboard showing students ranked by their total volunteer hours.
+
+**Usage:**  
+```bash
+flask view-leaderboard
+
+### `view-accolades`
+**Description:**  
+Displays accolades earned by a specific student.
+
+**Usage:**  
+```bash
+flask view-accolades
+
+### `log-hours`
+**Description:**
+Staff logs volunteer hours for a student.
+
+**Usage:**  
+```bash
+flask log-hours
+
+### `confirm-hours`
+**Description:**
+Staff confirms volunteer hours for a student.
+
+**Usage:**  
+```bash
+flask confirm-hours
+
+### `generate-rankings`
+**Description:**
+Generates and updates the leaderboard rankings based on students' total volunteer hours.
+
+**Usage:**  
+```bash
+flask generate-rankings
+
+### `get-top-students`
+**Description:**
+Retrieves and displays the top students from the leaderboard.
+
+**Usage:**  
+```bash
+flask get-top-students
+
+### `update-hours`
+**Description:**
+Updates the volunteer hours for a specific volunteer record.
+
+**Usage:**  
+```bash
+flask update-hours
+
+### `check-milestones`
+**Description:**
+Checks and awards milestone accolades for a student's volunteer record based on hours completed.
+
+**Usage:**  
+```bash
+flask check-milestones
+
+### `list-users`
+**Description:**
+Lists all users currently in the database.
+
+**Usage:**  
+```bash
+flask list-users
+
+## Initialization Data Summary
+
+The `init` command populates the database with the following sample data:
+
+- **Users:**
+  - Gina (Student) — username: `gina`, password: `gina123`
+  - Haily (Student) — username: `haily`, password: `haily123`
+  - Amarli (Student) — username: `amarli`, password: `amarli123`
+  - David (Staff) — username: `david`, password: `david123`
+  - Emma (Staff) — username: `emma`, password: `emma123`
+  - John (Staff) — username: `john`, password: `john123`
+
+- **Students:**
+  - Gina Inag — total volunteer hours: 120.5
+  - Haily — total volunteer hours: 99.0
+  - Amarli — total volunteer hours: 75.0
+
+- **Staff:**
+  - David Beckles
+  - Emma Watson
+  - John Smith
+
+- **Accolades:**
+  - Community Helper (Gina Inag) — Awarded for outstanding community service
+  - Volunteer Star (Haily) — Recognized for exceptional volunteer work
+  - Service Champion (Amarli) — Honored for dedication to service activities
+
+- **Volunteer Records:**
+  - Environmental Cleanup (Gina Inag) — 120.5 hours
+  - Food Bank Assistance (Haily) — 99.0 hours
+  - Animal Shelter Support (Amarli) — 75.0 hours
+
+- **Leaderboard:**
+  - Rank 1: Gina Inag — 120.5 hours
+  - Rank 2: Haily — 99.0 hours
+  - Rank 3: Amarli — 75.0 hours
+
 # Flask MVC Template
 A template for flask applications structured in the Model View Controller pattern [Demo](https://dcit-flaskmvc.herokuapp.com/). [Postman Collection](https://documenter.getpostman.com/view/583570/2s83zcTnEJ)
 
